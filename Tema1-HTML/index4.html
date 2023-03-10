@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head>
+        <title> Tema HTML 4 </title>
+    </head>
+
+    <body>
+        <center><h1> Formular inregistrare masina in service </h1></center>
+        <form action="#" method="get">
+            <fieldset>
+                <legend><span id="client-legend"> Date Client </span></legend>
+                <table border="1">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="cyan"> Date client </td>
+                    </tr>
+                    <tr>
+                        <th bgcolor="#E7E0E0"><label for="nume"> Nume </label></th>
+                        <td><input type="text" name="nume" id="nume" size="25"></td>
+                        <th bgcolor="#E7E0E0"><label for="prenume"> Prenume </label></th>
+                        <td><input type="text" name="prenume" id="prenume" size="25"></td>
+                    </tr>
+                    <tr> 
+                        <th><label for="data-nastere"> Data nasterii </label></th>
+                        <td colspan="2">
+                            <input type="text" name="data-nastere" id="data-nastere" value="2000-01-01" size="34">
+                        </td>
+                        <th><label for="sex"> Sex </label></th>
+                    </tr>
+                    <tr>
+                        <th><label for="telefon"> Telefon </label></th>
+                        <td colspan="2">
+                            <input type="text" name="telefon" id="telefon" size="34">
+                        </td>
+                        <td rowspan="2">
+                            <div id="sex" align="center">
+                                <input type="radio" name="sex" id="sex_m" value="masculin" checked="checked">
+                                <label for="sex_m"> Masculin </label> <br>
+                                <input type="radio" name="sex" id="sex_f" value="feminin">
+                                <label for="sex_f"> Feminin </label> <br>
+                                <input type="radio" name="sex" id="sex_o" value="altul">
+                                <label for="sex_o"> Altul </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="email"> E-mail </label></th>
+                        <td colspan="2">
+                            <input type="text" name="email" id="email" size="34">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="fax"> Fax </label></th>
+                        <td colspan="3">
+                            <center><input type="text" name="fax" id="fax" size="50"></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th bgcolor="#E7E0E0"> Adresa </th>
+                        <td colspan="3" bgcolor="#E7E0E0">
+                            <table border="3" align="center">
+                                <caption><i> Adresa client </i></caption>
+                                <tr>
+                                    <th colspan="2">
+                                        <label for="judet"> Judet </label>
+                                    </th>
+                                    <td><input type="text" name="judet" id="judet" size="15"></td>
+                                    <th><label for="cod-postal"> Cod Postal </label></th>
+                                    <td align="center"><input type="text" name="cod-postal" id="cod-postal" size="7"></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        <label for="oras"> Oras </label>
+                                    </th>
+                                    <td colspan="3">
+                                        <input type="text" name="oras" id="oras" size="41">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        <label for="strada"> Strada </label>
+                                    </th>
+                                    <td colspan="3">
+                                        <input type="text" name="strada" id="strada" size="41">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="nr-strada"> Nr </label></th>
+                                    <td><input type="text" name="nr-strada" id="nr-strada" size="3"></td>
+                                    <th><label for="bloc"> Bloc </label></th>
+                                    <td colspan="2">
+                                        <input type="text" name="bloc" id="bloc">
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
