@@ -5,8 +5,12 @@
     </head>
 
     <body>
-        <center><h1> Formular înregistrare mașină în service </h1></center>
-        <form action="#" method="get">
+        <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+            <img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+        <img src="https://ouch-cdn2.icons8.com/g7okf5VFPgyDeUMvyFbDtvHUn7m1mwZsuIMTt_jrDJA/rs:fit:256:254/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNTEy/LzU5OGM4ZmVmLWQx/Y2YtNDQ1OS04NDE2/LTA5NjhkMTQ4OTg2/NC5zdmc.png"
+            alt="gears-img" height="100" width="100">
+        <h1> Formular înregistrare mașină în service </h1>
+        <form action="/action_page.php" method="get">
             <fieldset>
                 <legend><span id="client-legend"><b> Date Client </b></span></legend>
                 <table border="1">
@@ -24,7 +28,7 @@
                         <td colspan="2">
                             <input type="text" name="data-nastere" id="data-nastere" value="2000-01-01" size="34">
                         </td>
-                        <th><label for="sex"> Sex </label></th>
+                        <th><label for="sex_"> Sex </label></th>
                     </tr>
                     <tr>
                         <th><label for="telefon"> Telefon </label></th>
@@ -32,7 +36,7 @@
                             <input type="text" name="telefon" id="telefon" size="34" maxlength="10">
                         </td>
                         <td rowspan="2">
-                            <div id="sex" align="center">
+                            <div id="sex_" align="center">
                                 <input type="radio" name="sex" id="sex_m" value="masculin" checked="checked">
                                 <label for="sex_m"> Masculin </label> <br>
                                 <input type="radio" name="sex" id="sex_f" value="feminin">
@@ -106,9 +110,9 @@
                     </tr>
                     <tr>
                         <th><label for="marca"> Marca </label></th>
-                        <td><input type="text" name="marca" id="marca"></td>
+                        <td><input type="text" name="marca" id="marca" readonly="readonly"></td>
                         <th><label for="model"> Model </label></th>
-                        <td><input type="text" name="model" id="model"></td>
+                        <td><input type="text" name="model" id="model" readonly="readonly"></td>
                     </tr>
                     <tr>
                         <th><label for="nr-inmatriculare"> Numar inmatriculare </label></th>
@@ -132,23 +136,23 @@
                         <th><label for="carburant"> Carburant </label></th>
                         <th><label for="an-masina"> An </label></th>
                         <td colspan="2">
-                            <input type="text" name="an-masina" id="an-masina" size="31" maxlength="10">
+                            <input type="text" name="an-masina" id="an-masina" size="31" maxlength="10" disabled="disabled">
                         </td>
                     </tr>
                     <tr>
                         <td rowspan="2">
                             <div id="carburant">
-                                <input type="radio" name="sex" id="carb-benzina" value="carb-benzina" checked="checked">
+                                <input type="radio" name="carburant" id="carb-benzina" value="carb-benzina" checked="checked">
                                 <label for="carb-benzina"> Benzina </label> <br>
-                                <input type="radio" name="sex" id="carb-motorina" value="carb-motorina">
+                                <input type="radio" name="carburant" id="carb-motorina" value="carb-motorina">
                                 <label for="carb-motorina"> Motorina </label> <br>
-                                <input type="radio" name="sex" id="carb-electric" value="carb-electric">
+                                <input type="radio" name="carburant" id="carb-electric" value="carb-electric">
                                 <label for="carb-electric"> Electrica </label>
                             </div>
                         </td>
                         <th><label for="culoare-masina"> Culoare </label></th>
                         <td colspan="2">
-                            <input type="text" name="culoare-masina" id="culoare-masina" size="31" maxlength="12">
+                            <input type="text" name="culoare-masina" id="culoare-masina" size="31" maxlength="12" disabled="disabled">
                         </td>
                     </tr>
                     <tr>
@@ -209,6 +213,53 @@
                     </tr>
                 </table>
             </fieldset>
+            <fieldset>
+                <legend><span id="terms-legend"><b> Termeni si conditii </b></span></legend>
+                <a href="https://doctorprocar.ro/termeni-si-conditii/" target="_blank"> Link interesant </a>
+                <p>
+                    Următorii termeni si conditii  reprezinta un acord integral in scopul utilizarii
+                    serviciilor auto. <br> Pentru utilizarea acestor servicii este necesara citirea si acceptarea
+                    in totalitate a acestor <br> termeni si conditii. Prin utilizarea  acestor servicii confirmati
+                    ca ati citit si acceptati acesti <br> termeni si conditii.
+                </p>
+                <ol>
+                    <li> Definirea termenilor </li>
+                    <li>
+                        Drepturi de autor
+                        <ul>
+                            <li> Indepartarea sau alterarea continutului sau a insemnelor care identifica dreptul <br> de autor al titularului asupra continutului; </li>
+                            <li> Modificarea, publicarea, transmiterea, retransmiterea in orice mod sau forma, <br> precum si participarea la transferul, vanzarea ori distributia unor materiale; </li>
+                            <li> Reproducerea sau stocarea continutului, precum si trimiterea acestui continut <br> catre orice alt website, server sau orice alt mijloc de stocare a informatiei </li>
+                            <li> Orice actiune sau incercare de natura sa incalce prevederile de mai sus vor <br> legitima Titularul sa faca uz de dreptul de a se adresa instantelor de judecata legal </li>
+                            <li> Anumite parti ale continutului publicat pe site-uri pot sa fie furnizate de terte <br> persoane cu care site-ul are relatii contractuale in acest sens. </li>
+                        </ul>
+                    </li>
+                    <li> Confidentialitate, informatii personale </li>
+                    <li>
+                        Politica de confidentialitate
+                        <ol type="a" start="2">
+                            <li> Prelucrarea si stocarea datelor cu caracter personal este facuta in conditii de <br> siguranta si in scopuri legitime legate in principal de desfasurarea activitatii <br> de prestare a serviciilor, pentru scopul facturării și pentru statistica. </li>
+                            <li> Furnizarea acestor date este facuta in mod voluntar de persoanele vizate dupa o <br> corecta informare a acestora in legatura cu scopurile prelucrarilor de date, <br> categoriile de date prelucrate si destinatarii carora le vor fi dezvaluite datele lor <br> personale. </li>
+                            <li> Pentru protecția datelor dumneavoastră, am luat măsuri tehnice și organizatorice <br> pentru a proteja aceste date în special împotriva pierderii, manipulării sau <br> accesului neautorizat. </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Sugestii si reclamatii
+                        <ol type="I">
+                            <li> serviciile oferite vor implini toate cerintele Utilizatorilor </li>
+                            <li> acuratetea, veridicitatea sau gradul de actualitate al continutului, accesarea <br> acestora se face pe riscul Utilizatorului. </li>
+                            <li> serviciile vor fi neintrerupte sau fara erori, ca eventualele defecte vor fi <br> corectate sau ca serviciile sau serverul este lipsit de virusuri </li>
+                        </ol>
+                    </li>
+                    <li> Forța majoră </li>
+                    <li> Legea aplicabilă </li>
+                </ol>
+                <input type="checkbox" name="termeni-conditii" id="termeni-conditii">
+                <label for="termeni-conditii"> Accept termenii si conditiile </label>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="button" value="Printeaza">
         </form>
     </body>
 </html>
