@@ -5,10 +5,10 @@
     </head>
 
     <body>
-        <center><h1> Formular inregistrare masina in service </h1></center>
+        <center><h1> Formular înregistrare mașină în service </h1></center>
         <form action="#" method="get">
             <fieldset>
-                <legend><span id="client-legend"> Date Client </span></legend>
+                <legend><span id="client-legend"><b> Date Client </b></span></legend>
                 <table border="1">
                     <tr>
                         <td colspan="4" align="center" bgcolor="cyan"> Date client </td>
@@ -29,7 +29,7 @@
                     <tr>
                         <th><label for="telefon"> Telefon </label></th>
                         <td colspan="2">
-                            <input type="text" name="telefon" id="telefon" size="34">
+                            <input type="text" name="telefon" id="telefon" size="34" maxlength="10">
                         </td>
                         <td rowspan="2">
                             <div id="sex" align="center">
@@ -93,6 +93,118 @@
                                 </tr>
                             </table>
                             <br>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><span id="car-legend"><b> Date masina </b></span></legend>
+                <table border="1">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="orange"> Date masina </td>
+                    </tr>
+                    <tr>
+                        <th><label for="marca"> Marca </label></th>
+                        <td><input type="text" name="marca" id="marca"></td>
+                        <th><label for="model"> Model </label></th>
+                        <td><input type="text" name="model" id="model"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nr-inmatriculare"> Numar inmatriculare </label></th>
+                        <td><input type="text" name="nr-inmatriculare" id="nr-inmatriculare"></td>
+                        <th><label for="caroserie"> Caroserie </label></th>
+                        <td align="center">
+                            <select name="caroserie" id="caroserie">
+                                <option value="0" selected> --Caroserie-- </option>
+                                <option value="1"> Berlină </option>
+                                <option value="2"> Break </option>
+                                <option value="3"> Coupé </option>
+                                <option value="4"> Cabriolet </option>
+                                <option value="5"> Limuzină </option>
+                                <option value="6"> Roadster </option>
+                                <option value="7"> Spider </option>
+                                <option value="8"> Pick-up </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="carburant"> Carburant </label></th>
+                        <th><label for="an-masina"> An </label></th>
+                        <td colspan="2">
+                            <input type="text" name="an-masina" id="an-masina" size="31" maxlength="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            <div id="carburant">
+                                <input type="radio" name="sex" id="carb-benzina" value="carb-benzina" checked="checked">
+                                <label for="carb-benzina"> Benzina </label> <br>
+                                <input type="radio" name="sex" id="carb-motorina" value="carb-motorina">
+                                <label for="carb-motorina"> Motorina </label> <br>
+                                <input type="radio" name="sex" id="carb-electric" value="carb-electric">
+                                <label for="carb-electric"> Electrica </label>
+                            </div>
+                        </td>
+                        <th><label for="culoare-masina"> Culoare </label></th>
+                        <td colspan="2">
+                            <input type="text" name="culoare-masina" id="culoare-masina" size="31" maxlength="12">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="cap-motor"> Cap. Cilindrica </label></th>
+                        <td colspan="2">
+                            <input type="text" name="cap-motor" id="cap-motor" size="31" maxlength="12">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="yellow"> Servicii </td>
+                    </tr>
+                    <tr>
+                        <th><label for="probleme-masina"> Probleme masina </label></th>
+                        <td colspan="3" align="center">
+                            <select name="probleme-masina" id="probleme-masina" size="5" multiple>
+                                <option value="0"> Scurgeri de ulei </option>
+                                <option value="1"> Probleme la sistemul de frânare </option>
+                                <option value="2"> Volan care trepidează </option>
+                                <option value="3"> Geometria roților incorectă </option>
+                                <option value="4"> Alternator defect </option>
+                                <option value="5"> Baterie moartă </option>
+                                <option value="6"> Demaror/starter stricat </option>
+                                <option value="7"> Termostat blocat sau defect </option>
+                                <option value="8"> Filtre de aer murdare </option>
+                                <option value="9"> Supraincalzirea </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="servicii"> Servicii dorite </label></th>
+                        <td colspan="3">
+                            <div id="servicii">
+                                <input type="checkbox" name="serv" id="serv1" value="0">
+                                Reparatii probleme mentionate anterior <br>
+                                <input type="checkbox" name="serv" id="serv2" value="1">
+                                Schimbarea uleiului <br>
+                                <input type="checkbox" name="serv" id="serv3" value="2">
+                                Reglajul motorului <br>
+                                <input type="checkbox" name="serv" id="serv4" value="3">
+                                Tratament anti-coroziune <br>
+                                <input type="checkbox" name="serv" id="serv5" value="4">
+                                Reglarea sistemului de injecție <br>
+                                <input type="checkbox" name="serv" id="serv6" value="5">
+                                Lucru de electrician <br>
+                                <input type="checkbox" name="serv" id="serv7" value="6">
+                                Aplicarea foliilor de protecție <br>
+                                <input type="checkbox" name="serv" id="serv8" value="7">
+                                Înlocuirea pieselor suspensiei <br>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="observatii"> Observatii </label></th>
+                        <td colspan="3">
+                            <textarea name="observatii" id="observatii" cols="54" rows="5" title="Eventuale observatii">A se completa cu eventuale observatii
+                            </textarea>
                         </td>
                     </tr>
                 </table>
