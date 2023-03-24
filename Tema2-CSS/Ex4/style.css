@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    width: 84px;
+    aspect-ratio: 1;
+    display: block;
+}
+
+li:nth-child(1) {
+    background: url(css-pr4.png) 0px 84px;
+}
+
+li:nth-child(2) {
+    background: url(css-pr4.png) -84px 84px;
+}
+
+li:nth-child(3) {
+    background: url(css-pr4.png) -168px 84px;
+}
+
+li:nth-child(4) {
+    background: url(css-pr4.png) -252px 84px;
+}
+
+li:nth-child(5) {
+    background: url(css-pr4.png) -336px 84px;
+}
+
+li:nth-child(6) {
+    background: url(css-pr4.png) -420px 84px;
+}
+
+li:nth-child(7) {
+    background: url(css-pr4.png) -504px 84px;
+}
+
+li:nth-child(8) {
+    background: url(css-pr4.png) -588px 84px;
+}
+
+li:nth-child(9) {
+    background: url(css-pr4.png) -672px 84px;
+}
+
+li:nth-child(10) {
+    background: url(css-pr4.png) -756px 84px;
+}
+
+li:nth-child(11) {
+    background: url(css-pr4.png) -840px 84px;
+}
+
+
+
+/* HOVER */
+
+
+
+li:nth-child(1):hover {
+    background: url(css-pr4.png) 0px 0px;
+}
+
+li:nth-child(2):hover {
+    background: url(css-pr4.png) -84px 0px;
+}
+
+li:nth-child(3):hover {
+    background: url(css-pr4.png) -168px 0px;
+}
+
+li:nth-child(4):hover {
+    background: url(css-pr4.png) -252px 0px;
+}
+
+li:nth-child(5):hover {
+    background: url(css-pr4.png) -336px 0px;
+}
+
+li:nth-child(6):hover {
+    background: url(css-pr4.png) -420px 0px;
+}
+
+li:nth-child(7):hover {
+    background: url(css-pr4.png) -504px 0px;
+}
+
+li:nth-child(8):hover {
+    background: url(css-pr4.png) -588px 0px;
+}
+
+li:nth-child(9):hover {
+    background: url(css-pr4.png) -672px 0px;
+}
+
+li:nth-child(10):hover {
+    background: url(css-pr4.png) -756px 0px;
+}
+
+li:nth-child(11):hover {
+    background: url(css-pr4.png) -840px 0px;
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    background-color: red;
+    height: 100px;
+}
+
+.menu {
+    list-style-type: none;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.main {
+    background-color: green;
+    text-align: left;
+    min-height: calc(100vh - 185px);
+}
+
+footer {
+    background-color: pink;
+    height: 60px;
+}
