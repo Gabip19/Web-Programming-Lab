@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Problema 4 </title>
+    <style>
+        table {
+            border: 1px solid black;
+            margin: 50px auto;
+            background-color: black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+        }
+        th {
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <table class="column-sortable">
+        <tr><th data-type="string"> Fructe </th><th data-type="number"> Pret </th><th data-type="number"> Cantitate </th></tr>
+        <tr><td> Cirese </td><td> 10 </td><td> 90 </td></tr>
+        <tr><td> Mere </td><td> 8 </td><td> 16 </td></tr>
+        <tr><td> Banane </td><td> 12 </td><td> 50 </td></tr>
+        <tr><td> Lamai </td><td> 30 </td><td> 5 </td></tr>
+    </table>
+    <table class="row-sortable">
+        <tr><th data-type="string"> Fructe </th><td> Cirese </td><td> Mere </td><td> Banane </td><td> Lamai </td></tr>
+        <tr><th data-type="number"> Pret </th><td> 10 </td><td> 8 </td><td> 12 </td><td> 30 </td></tr>
+        <tr><th data-type="number"> Cantitate </th><td> 90 </td><td> 16 </td><td> 50 </td><td> 5 </td></tr>
+    </table>
+</body>
+</html>
