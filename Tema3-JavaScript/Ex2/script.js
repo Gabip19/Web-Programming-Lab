@@ -8,11 +8,13 @@ function validateName(value) {
 
 function validateDate(value) {
     let elem = value.split('-');
-    return elem[0] <= 2013 && elem[0] >= 1973;
+    return elem[0] <= 2015 && elem[0] >= 1973;
 }
 
-function validateAge(value) {
-    return /^\d+$/.test(value) && value >= 10 && value <= 50;
+function validateAge(value, dateValue) {
+    let ok = /^\d+$/.test(value) && value >= 8 && value <= 50;
+    ok = ok && (new Date().getFullYear() - dateValue.split("-")[0] == value);
+    return ok;
 }
 
 function validateEmail(value) {
@@ -26,7 +28,7 @@ function validateInput() {
     let dateInput = document.forms["myForm"]["form_date"];
     let ageInput = document.forms["myForm"]["form_age"];
     let emailInput = document.forms["myForm"]["form_email"];
-    
+
     if (!validateName(nameInput.value)) {
         errors += "Campul nume nu este completat corect.\n";
         nameInput.style.border = "3px solid red";
@@ -41,7 +43,7 @@ function validateInput() {
         dateInput.style.border = "1px solid black";
     }
 
-    if (!validateAge(ageInput.value)) {
+    if (!validateAge(ageInput.value, dateInput.value)) {
         errors += "Campul varsta nu este completat corect.\n";
         ageInput.style.border = "3px solid red";
     } else {
