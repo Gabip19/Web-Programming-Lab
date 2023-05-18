@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Problema 2 </title>
+    <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin: 130px auto;
+            flex-direction: column;
+        }
+        #myTable {
+            border-collapse: collapse;
+            border: 2px solid black;
+            margin-bottom: 30px;
+        }
+        td, th {
+            font-size: 18px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table id="myTable">
+        </table>
+        <div>
+            <button id="prev-btn"> < Prev </button>
+            <button id="next-btn"> Next > </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Problema 3 </title>
+    <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 150px auto;
+            width: fit-content;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="ids"> Id: </label>
+        <select id="idsList" name="ids"></select>
+        <br><br>
+        <form id="myForm">
+            <label for="name"> Nume: </label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="surname"> Prenume: </label>
+            <input type="text" id="surname" name="surname"><br><br>
+            <label for="phone"> Telefon: </label>
+            <input type="text" id="phone" name="phone"><br><br>
+            <label for="email"> E-mail: </label>
+            <input type="text" id="email" name="email"><br><br>
+            <button type="button" id="saveBtn" disabled> Save </button>
+        </form>
+    </div>
+</body>
+</html>
