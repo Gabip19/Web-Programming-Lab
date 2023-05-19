@@ -44,22 +44,43 @@ function selectionChanged() {
     }
 }
 
-function loadFormData(id) {
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            let data = JSON.parse(this.response);
+// function loadFormData(id) {
+//     let xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             let data = JSON.parse(this.response);
 
+//             $("#name").val(data.nume);
+//             $("#surname").val(data.prenume);
+//             $("#phone").val(data.telefon);
+//             $("#email").val(data.email);
+
+//             oldData = $("#myForm").serializeArray();
+//         }
+//     }
+//     xmlhttp.open("GET", "http://localhost/ajaxweb/pb3/persondata.php?id=" + id, true);
+//     xmlhttp.send();
+// }
+
+function loadFormData(id) {
+    $.ajax({
+        url: "http://localhost/ajaxweb/pb3/persondata.php",
+        type: "GET",
+        data: { id : id },
+        dataType: "json",
+        success: function(data) {
             $("#name").val(data.nume);
             $("#surname").val(data.prenume);
             $("#phone").val(data.telefon);
             $("#email").val(data.email);
-
+    
             oldData = $("#myForm").serializeArray();
+        },
+        error: function(data) {
+            console.log(data);
         }
-    }
-    xmlhttp.open("GET", "http://localhost/ajaxweb/pb3/persondata.php?id=" + id, true);
-    xmlhttp.send();
+    });
+    
 }
 
 function checkForUpdate(formData) {
@@ -71,12 +92,25 @@ function checkForUpdate(formData) {
     $("#saveBtn").prop("disabled", !savable);
 }
 
-function updateData() {
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "http://localhost/ajaxweb/pb3/updateperson.php", true);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send($("#myForm").serialize() + "&id=" + selectedId);
+// function updateData() {
+//     let xmlhttp = new XMLHttpRequest();
+//     xmlhttp.open("POST", "http://localhost/ajaxweb/pb3/updateperson.php", true);
+//     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//     xmlhttp.send($("#myForm").serialize() + "&id=" + selectedId);
     
+//     savable = false;
+//     $("#saveBtn").prop("disabled", true);
+
+//     oldData = $("#myForm").serializeArray();
+// }
+
+function updateData() {
+    $.ajax({
+        url: "http://localhost/ajaxweb/pb3/updateperson.php",
+        type: "POST",
+        data: $("#myForm").serialize() + "&id=" + selectedId
+    });
+
     savable = false;
     $("#saveBtn").prop("disabled", true);
 

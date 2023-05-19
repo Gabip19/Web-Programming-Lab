@@ -18,6 +18,21 @@ function loadTreeView() {
     });
 }
 
+// function loadTreeView() {
+//     let xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             let data = JSON.parse(this.responseText);
+//             let treeView = buildTreeView(data);
+//             $("#treeViewContainer").empty();
+//             $("#treeViewContainer").append(treeView);
+//         }
+//     };
+//     xmlhttp.open("GET", "http://localhost/ajaxweb/pb5/server.php", true);
+//     xmlhttp.setRequestHeader("Content-Type", "application/json"); 
+//     xmlhttp.send();
+// }
+
 function buildTreeView(data) {
     let ul = $("<ul>");
 
@@ -65,19 +80,37 @@ function loadDirectoryContents(directoryPath, parentElem) {
     });
 }
 
+// function loadFileContents(filePath) {
+//     $.ajax({
+//         url: "http://localhost/ajaxweb/pb5/server.php",
+//         type: "POST",
+//         data: { file: filePath },
+//         dataType: "text",
+//         success: function(data) {
+//             displayFileContents(data);
+//         },
+//         error: function() {
+//             console.log('Eroare la încărcarea conținutului fișierului.');
+//         }
+//     });
+// }
+
 function loadFileContents(filePath) {
-    $.ajax({
-        url: "http://localhost/ajaxweb/pb5/server.php",
-        type: "POST",
-        data: { file: filePath },
-        dataType: "text",
-        success: function(data) {
+    var formData = new URLSearchParams();
+    formData.append("file", filePath);
+    
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = this.responseText;
             displayFileContents(data);
-        },
-        error: function() {
-            console.log('Eroare la încărcarea conținutului fișierului.');
         }
-    });
+    };
+
+    xmlhttp.open("POST", "http://localhost/ajaxweb/pb5/server.php", true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+    xmlhttp.send(formData.toString());
+    
 }
 
 function displayFileContents(content) {
