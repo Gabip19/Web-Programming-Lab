@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/pb4",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Asus",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+      "swiftmailer/swiftmailer": "^6.0"
+  }
+}
